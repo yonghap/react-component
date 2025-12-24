@@ -8,7 +8,7 @@ export default function Home() {
       {/* Button */}
       <article>
         <h2 className="text-2xl font-bold mb-4">Button</h2>
-        <div className="flex flex-wrap items-center gap-2 md:flex-row">
+        <div className="flex flex-wrap items-center gap-2">
           <Button variant="primary" size="small">
             Small
           </Button>
@@ -22,8 +22,12 @@ export default function Home() {
       {/* Input */}
       <article className="mt-10">
         <h2 className="text-2xl font-bold mb-4">Input</h2>
-        <div className="flex flex-wrap items-center gap-2 md:flex-row">
-          <Input variant="primary" inputSize ="small" placeholder="Small Input" />
+        <div className="flex flex-wrap items-center gap-2">
+          <Input
+            variant="primary"
+            inputSize="small"
+            placeholder="Small Input"
+          />
         </div>
       </article>
     </section>
