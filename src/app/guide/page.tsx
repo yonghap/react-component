@@ -1,8 +1,12 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 
 export default function Home() {
+  const [value, setValue] = useState("");
+
   return (
     <section className="p-10">
       {/* Button */}
@@ -23,10 +27,14 @@ export default function Home() {
       <article className="mt-10">
         <h2 className="text-2xl font-bold mb-4">Input</h2>
         <div className="flex flex-wrap items-center gap-2">
+          <Input inputSize="small" placeholder="Small Input" />
+          <Input inputSize="default" placeholder="Default Input" />
+          <Input inputSize="large" placeholder="Large Input" />
           <Input
-            variant="primary"
-            inputSize="small"
-            placeholder="Small Input"
+            placeholder="disabled Input"
+            value={value}
+            disabled={true}
+            onChange={(e) => setValue(e.target.value)}
           />
         </div>
       </article>

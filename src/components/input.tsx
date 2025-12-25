@@ -2,18 +2,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 // 버튼 스타일 정의
 const inputVariants = cva(
-  "inline-flex items-center justify-start whitespace-nowrap transition-all rounded border focus:outline-none",
+  "border border-gray-300 rounded  outline-none disabled:bg-gray-200 disabled:text-gray-900",
   {
     variants: {
       variant: {
-        default: "bg-gray-100 text-black",
+        default: "",
         primary: "bg-blue-500 text-white",
         secondary: "bg-gray-200 text-black",
       },
       inputSize: {
-        default: "px-4 py-1 text-base",
-        small: "px-3 py-1 text-xs",
-        large: "px-6 py-1.5 text-xl",
+        default: "h-10 text-sm px-2 py-1",
+        small: "h-8 text-xs px-2 py-1",
+        large: "h-12 text-xl px-3 py-1",
       },
     },
     defaultVariants: {
