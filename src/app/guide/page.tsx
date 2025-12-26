@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
+import icon_check from "./assets/icon/icon_check.svg?url";
 
 export default function Home() {
   const [value, setValue] = useState("");
@@ -21,6 +23,7 @@ export default function Home() {
           <Button variant="secondary" size="large">
             Large
           </Button>
+          <Image src={icon_check} alt="Logo" width={200} height={200} />
         </div>
       </article>
       {/* Input */}
