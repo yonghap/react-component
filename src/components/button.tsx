@@ -9,11 +9,17 @@ const buttonVariants = cva(
         default: "bg-gray-100 text-black",
         primary: "bg-blue-500 text-white",
         secondary: "bg-gray-200 text-black",
+        icon: "bg-white border border-gray-300",
+        disabled: "bg-gray-300 text-gray-500 cursor-not-allowed",
       },
       size: {
-        default: "px-4 py-1 text-base",
+        default: "px-5 py-1.5 text-base",
         small: "px-3 py-1 text-xs",
-        large: "px-6 py-1.5 text-xl",
+        large: "px-7 py-2 text-xl",
+        full: "w-full px-5 py-1.5",
+        iconSmall: "w-8 h-8 p-1 [&_img]:w-4.5 [&_img]:h-4.5",
+        iconDefault: "w-10 h-10 p-2 [&_img]:w-7 [&_img]:h-7",
+        iconLarge: "w-12 h-12 p-2.5 [&_img]:w-8 [&_img]:h-8",
       },
     },
     defaultVariants: {
@@ -27,9 +33,9 @@ const buttonVariants = cva(
 type ButtonProps = VariantProps<typeof buttonVariants> &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-function Button({ variant, size, ...props }: ButtonProps) {
+function Button({ variant, size, disabled, ...props }: ButtonProps) {
   return (
-    <button className={buttonVariants({ variant, size })}>
+    <button className={buttonVariants({ variant, size })} disabled={disabled}>
       {props.children}
     </button>
   );

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
-import icon_check from "./assets/icon/icon_check.svg?url";
+import IconCheck from "@/app/assets/icon/icon_check.svg";
 
 export default function Home() {
   const [value, setValue] = useState("");
@@ -20,15 +20,23 @@ export default function Home() {
           </Button>
           <Button>Default</Button>
           <Button size="large">Large</Button>
-          <Button variant="secondary" size="large">
+          <Button variant="disabled" size="large" disabled={true}>
             Large
           </Button>
-          <Image src={icon_check} alt="Logo" width={200} height={200} />
+          <Button variant="icon" size="iconSmall">
+            <Image src={IconCheck} alt="Logo" />
+          </Button>
+          <Button variant="icon" size="iconDefault">
+            <Image src={IconCheck} alt="Logo" />
+          </Button>
+          <Button variant="icon" size="iconLarge">
+            <Image src={IconCheck} alt="Logo" />
+          </Button>
         </div>
       </article>
       {/* Input */}
       <article className="mt-10">
-        <h2 className="text-2xl font-bold mb-4">Input</h2>
+        <h2 className="text-2xl font-bold mb-4">Inputs</h2>
         <div className="flex flex-wrap items-center gap-2">
           <Input inputSize="small" placeholder="Small Input" />
           <Input inputSize="default" placeholder="Default Input" />
