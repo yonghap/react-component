@@ -30,7 +30,7 @@ export default function Home() {
             <Image src={IconCheck} alt="Logo" />
           </Button>
           <Button variant="icon" size="iconLarge">
-            <Image src={IconCheck} alt="Logo" />
+            <img src={IconCheck.src} alt="Logo" />
           </Button>
         </div>
       </article>

@@ -17,9 +17,9 @@ const buttonVariants = cva(
         small: "px-3 py-1 text-xs",
         large: "px-7 py-2 text-xl",
         full: "w-full px-5 py-1.5",
-        iconSmall: "w-8 h-8 p-1 [&_img]:w-4.5 [&_img]:h-4.5",
-        iconDefault: "w-10 h-10 p-2 [&_img]:w-7 [&_img]:h-7",
-        iconLarge: "w-12 h-12 p-2.5 [&_img]:w-8 [&_img]:h-8",
+        iconSmall: "w-8 h-8  [&_img]:w-4.5 [&_img]:h-4.5",
+        iconDefault: "w-10 h-10  [&_img]:w-7 [&_img]:h-7",
+        iconLarge: "w-12 h-12 [&_img]:w-8 [&_img]:h-8",
       },
     },
     defaultVariants: {
