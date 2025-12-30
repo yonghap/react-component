@@ -10,7 +10,7 @@ const buttonVariants = cva(
         primary: "bg-blue-500 text-white",
         secondary: "bg-gray-200 text-black",
         icon: "bg-white border border-gray-300",
-        disabled: "bg-gray-300 text-gray-500 cursor-not-allowed",
+        disabled: "bg-gray-200 text-gray-400 cursor-not-allowed",
       },
       size: {
         default: "px-5 py-1.5 text-base",
